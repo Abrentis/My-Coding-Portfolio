@@ -8,19 +8,57 @@
 </head>
 <body>
     <header>
-        <h1>Brent Knox</h1>
-        <figure>
-            <img src="./assets/headshot.jpg">
-        </figure>
-        <nav>
-
-        </nav>
+        <div id="header-container-1" class="header-container">
+            <h1 class="sans-serif">Brent Knox</h1>
+            <figure>
+                <img id="headshot" src="./assets/images/headshot.jpg">
+            </figure>
+        </div>
+        <div class="header-container">
+            <nav>
+                <ul>
+                    <li class="sans-serif"><a href="#about-me">About me</a></li>
+                    <li class="sans-serif"><a href="#work">Work</li></li>
+                    <li class="sans-serif"><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    
+    <figure>
+        <img id="landscape" src="./assets/images/landscape.jpg">
+    </figure>
     <main>
-    </main>
+        <section id="about-me">
+            <h2 class="sans-serif">About me</h2>
+            <p class="sans-serif">Hi! My name is Brent Knox, and I am an amateur coder. This is my website highlighting some of the projects I have worked on in the past.</p>
+        </section>
 
+        <section id="work">
+            <h2 class="sans-serif">Work</h2>
+            <div class="projects">
+                <figure>
+                    <figcaption class="sans-serif">Personal Study Guide (HTML / CSS / JavaScript)</figcaption>
+                    <a href="https://abrentis.github.io/prework-study-guide/"><img src="./assets/images/bowtie-cat.png"></a>
+                </figure>
+            </div>
+            <div id="smaller-projects" class="projects">
+                <figure>
+                    <figcaption class="sans-serif">Challenge Assignment #1 (HTML / CSS)</figcaption>
+                    <a href="https://abrentis.github.io/Horiseon-Business-Marketing-Agency-Module-1-Challenge/"><img class="smaller-project-image" src="./assets/images/digital-marketing-meeting.jpg"></a>
+                </figure>
+                <figure>
+                    <figcaption class="sans-serif">Stay tuned for more projects!</figcaption>
+                    <a href="#"><img class="smaller-project-image" src="./assets/images/coming-soon.jpg"></a>                
+                </figure>
+            </div>
+        </section>
+    </main>
+        
     <footer>
+        <section id="contact">
+            <h2 class="sans-serif">Contact</h2>
+            <p class="sans-serif">Email: brentknox@rocketmail.com</p>
+        </section>
     </footer>
 </body>
 </html>
