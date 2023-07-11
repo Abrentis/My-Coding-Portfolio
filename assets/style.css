@@ -7,8 +7,10 @@
 body {
     background-color: rgb(231, 247, 241);
     min-width: 100%;
+    flex: 0 0;
 }
 
+        /* Sets all text to the same font, color, and alignment */
 .sans-serif {
     font-family: sans-serif;
     color: darkblue;
@@ -21,7 +23,7 @@ header {
     align-items: center;
     justify-content: space-between;
     background: linear-gradient(to right, rgb(247, 223, 208), violet);
-box-sizing: border-box;
+    flex: 0 0;
 }
 
 #header-container-1 {
@@ -58,7 +60,7 @@ header ul li {
     text-align: center;
 }
 
-/* Landscape image */
+        /* Landscape image */
 #landscape {
     width: 100%;
     height: 600px;
@@ -69,40 +71,98 @@ header ul li {
 main {
     display: flex;
     flex-direction: column;
-    margin: 25px;
+    margin: 25px 0px 25px 0px;
+    align-items: center;
 }
 
 #about-me {
-    margin: 50px;
+    margin: 50px 0px 50px 0px;
 }
 
 section figure {
     padding: 10px;
     border: dashed darkblue;
     margin: 50px 10px 50px 10px;
+
 }
 
         /* Reduces the clickable region created by <a href=""> to the images themselves */
 .projects {
     display: flex;
     justify-content: space-evenly;
-
 }
 
-        /* Sets size of images to be small and contained */
-.smaller-project-image {
+#large-card {
+    height: 750px;
+    width: 750px;
+}
+
+.small-card {
     height: 500px;
     width: 500px;
+}
+
+        /* Sets size of images contained within their parent elements */
+#large-picture,
+.smaller-project-image {
+    height: 100%;
+    width: 100%;
     object-fit: contain;
 }
 
-figcaption {
-    text-align: center;
+/* Media queries that shrink containers down to sizes that prevent other elements from collapsing in on themselves */
+@media only screen and (max-width: 1050px) {
+    #large-card {
+        height: 500px;
+        width: 500px;
+    }
+    .small-card {
+        height: 250px;
+        width: 250px;
+    }
+    #landscape {
+        height: 500px;
+    }
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 900px) {
+    header {
+        flex-direction: column;
+    }
+    #landscape {
+        height: 400px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    header ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+    header ul li {
+        margin: 10%;
+        font-size: 25px;
+    }
+    #landscape {
+        height: 300px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    #large-card {
+        height: 300px;
+        width: 300px;
+    }
+    #large-picture {
+        height: 90%
+    }
     #smaller-projects {
         display: flex;
         flex-direction: column;
+        align-items: center;
     }
+    #landscape {
+        height: 200px;
+    }
+    
 }
